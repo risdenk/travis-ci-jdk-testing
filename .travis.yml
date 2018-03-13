@@ -32,6 +32,9 @@ matrix:
       - tar -xf /tmp/${JDK}.tar.gz -C /tmp
       - export PATH=/tmp/jdk-9*/bin/:$PATH
       - export JAVA_HOME=/tmp/jdk-9*
+      - echo $PATH
+      - echo $JAVA_HOME
+      - ls -l /tmp/jdk-9*
 script:
   # Print surefire output to the console instead of files
   - unset _JAVA_OPTIONS
