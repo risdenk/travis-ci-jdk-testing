@@ -24,7 +24,7 @@ matrix:
     - jdk: openjdk7
     - group: edge
       jdk: ibmjava8
-      before_install: jdk_swicher home ibmjava8
+      before_install: jdk_switcher home ibmjava8
     - env:
       - JDK=openjdk9witheclipseopenj9
       before_install:
