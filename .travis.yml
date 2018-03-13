@@ -22,6 +22,7 @@ matrix:
     - jdk: oraclejdk9
     - jdk: oraclejdk8
     - jdk: openjdk7
+    - jdk: ibmjava8
       # Travis appears to have broken IBM JDK. Can only get a JRE.
       # Needs to be investigate.
       #    - jdk: ibmjava8
@@ -30,4 +31,5 @@ script:
   - unset _JAVA_OPTIONS
   - mvn --version
 sudo: required
+group: edge
 # End .travis.yml
