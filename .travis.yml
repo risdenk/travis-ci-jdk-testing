@@ -24,6 +24,8 @@ matrix:
     - jdk: openjdk7
     - group: edge
       jdk: ibmjava8
+      before_install:
+      - export PATH=/usr/bin/:$PATH
 script:
   # Print surefire output to the console instead of files
   - unset _JAVA_OPTIONS
