@@ -35,6 +35,16 @@ matrix:
       - echo $PATH
       - echo $JAVA_HOME
       - ls -l /tmp/jdk-9*
+    - env:
+      - JDK=ibmjava8docker
+      - IMAGE=maven:ibmjava
+      services:
+      - docker
+      before_install:
+      - docker pull $IMAGE
+      script:
+      - docker run -it --rm -v "$PWD":/usr/src/mymaven -v "$HOME/.m2":/root/.m2 -w /usr/src/mymaven $IMAGE mvn --version
+
 script:
   # Print surefire output to the console instead of files
   - unset _JAVA_OPTIONS
